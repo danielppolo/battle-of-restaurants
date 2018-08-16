@@ -1,0 +1,9 @@
+<div class="home-content">
+  <div class="centered">
+    <h1>Welcome to BoR</h1>
+    <h3>aka. Battle of Restaurants</h3>
+  </div>
+  <%= form_for @battle, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.submit "Start a battle!", class: 'btn' %>
+  <% end %>
+</div>

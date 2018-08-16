@@ -1,0 +1,25 @@
+<div class="battle-content">
+
+<% if @battle.running? %>
+<h1>Vote now!</h1>
+<h2 id="countdown"><%= @battle.created_at %></h2>
+<% if @restaurants %>
+<h2><%= @most.name %> is winning!</h2>
+<% @restaurants.each do |r| %>
+<div class="restaurant">
+<h3><%= r.name %></h3> <span class="votes"><%= r.votes %></span>
+<%= form_for r,  url: restaurant_path(r), method: :patch do |f| %>
+<%= f.submit "+1", class: 'btn-upvote' %>
+</div>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+
+<% if @battle.ended? %>
+<h1 class="winner"><%= @most.name %> is the winner!</h1>
+<%= form_for @new_battle, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.submit "Start a new battle!", class: 'btn' %>
+  <% end %>
+<% end %>
+</div>

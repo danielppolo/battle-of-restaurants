@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Roboto:400,500,700');
+html, body, body *{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Concert One', cursive;
+  font-weight: 400;
+  color: white;
+}
+
+.centered{
+  text-align: center;
+}
+
+.app-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: #8BC6EC;
+  background-image: -webkit-linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  background-image: -moz-linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  background-image: -o-linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content{
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  h1{
+    font-size: 5vw;
+    color: white;
+  }
+}
+
+.btn{
+  height: 5vw;
+  width: 25vw;
+  background-image: none;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: 700;
+  transition: 0.5s ease;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 3vh;
+
+  &:hover{
+    background-color: white;
+    color: #333;
+  }
+}
+
+.battle-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .restaurant{
+
+  }
+
+  .votes{
+    font-weight: 700;
+    font-size: 2.5vw;
+    color: white;
+  }
+}
+
+.btn-upvote{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+  width: 4vw;
+  height: 4vw;
+  background-color: white;
+  background-image: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border-radius: 4vw;
+  font-weight: 700;
+
+  &:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  }
+}
